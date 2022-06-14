@@ -1,6 +1,6 @@
 Executar como root o script install.sh
 
--> chmod +x install.sh
+-> chmod +x install.sh <br />
 -> ./install.sh
 
 

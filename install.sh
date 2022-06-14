@@ -28,7 +28,7 @@ read interface
 sed -i "s/interface=.*/interface='$interface'/g" $SCRIPTFILE 
 sed -i "s/user=.*/user='$loginnoip'/g" $SCRIPTFILE
 sed -i "s/pass=.*/pass='$senhanoip'/g" $SCRIPTFILE
-sed -i "s/hostname=.*/hostname='$registro'/g" $SCRIPTFILE
+sed -i "s/hostname_here=.*/hostname='$registro'/g" $SCRIPTFILE
 
 echo "Verificando asquivos necessários para prosseguir"
 
@@ -41,8 +41,8 @@ fi
 
 chmod +x $SCRIPTFILE
 chmod +x $DAMONFILE
-cp $SCRIPTFILE /usr/local/bin
-cp $DAMONFILE /usr/lib/systemd/system
+cp $SCRIPTFILE /usr/local/bin/
+cp $DAMONFILE /usr/lib/systemd/system/
 systemctl daemon-reload
 systemctl enable noip-duc --now
 
